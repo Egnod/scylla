@@ -20,8 +20,8 @@ jobs:
       run: |
         poetry install
     - name: Deps
-        run: |
-          docker-compose -f test-stack.yml up -d
+      run: |
+        docker-compose -f test-stack.yml up -d
     - name: test
       run: |
         pytest
