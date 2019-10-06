@@ -12,11 +12,16 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-potion-client = "^2.5"
-sitri = "^0.1.2"
+sitri = "^0.4.0"
 requests = "^2.22"
 
 [tool.poetry.dev-dependencies]
+pytest-httpserver = "^0.3.4"
+pre-commit = "^1.18"
+bumpversion = "^0.5.3"
+pytest = "^5.2"
+turmalin = "^2.5"
+mypy = "^0.730.0"
 
 [tool.black]
 line-length = 120

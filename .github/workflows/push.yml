@@ -20,6 +20,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install poetry
         poetry install
+        apt install docker-compose docker
+        service docker start
+        docker-compose -f stack.yml up
     - name: Configure git
       run: |
         git config --global user.email "egnod@ya.ru"
