@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scylla_client"
-version = "0.1.2"
+version = "0.1.3"
 description = "Scylla - client for charybdis permission manager"
 authors = ["Alexander Lavrov <egnod@ya.ru>"]
 license = "MIT"
