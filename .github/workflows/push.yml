@@ -23,5 +23,9 @@ jobs:
       run: |
         docker-compose -f test-stack.yml up -d
     - name: test
+      env:
+        SCYLLA_CHARYBDIS_ENDPOINT: http://localhost:34004
+        SCYLLA_CHARYBDIS_USERNAME: basic
+        SCYLLA_CHARYBDIS_PASSWORD: 123
       run: |
-        pytest
+        poetry run pytest
