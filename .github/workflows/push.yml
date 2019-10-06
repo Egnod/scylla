@@ -15,15 +15,4 @@ jobs:
         python-version: 3.7
     - name: Deps
       run: |
-        python -m pip install --upgrade pip
-        pip install poetry
-        poetry install
-        docker-compose -f test-stack.yml up
-    - name: Configure git
-      run: |
-        git config --global user.email "egnod@ya.ru"
-        git config --global user.name "Alexander Lavrov"
-    - name: Publish pypi
-      run: |
-        poetry build
-        poetry publish -u __token__ -p ${{ secrets.pypi_token }}
+        docker-compose -f test-stack.yml up -d
