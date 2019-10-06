@@ -21,7 +21,8 @@ services:
       - POSTGRES_PASSWORD=charybdis_secrets
       - POSTGRES_USER=charybdis
       - POSTGRES_DB=charybdis
-
+    ports:
+      - 34009:5432
   redis:
     image: 'bitnami/redis:5.0'
     environment:
