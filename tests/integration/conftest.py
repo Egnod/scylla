@@ -37,4 +37,3 @@ def test_reader_client(test_reader_user):
     client = Client(username=test_reader_user.username, password="123")
 
     return client
-

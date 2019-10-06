@@ -1,5 +1,6 @@
 import typing
 from abc import ABCMeta
+
 import pytest
 
 

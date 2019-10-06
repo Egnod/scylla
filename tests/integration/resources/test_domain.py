@@ -1,4 +1,3 @@
-import pytest
 from .util import check_read_only
 
 
