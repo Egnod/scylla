@@ -3,14 +3,14 @@ import pytest
 from scylla import Client
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def test_admin_client():
     client = Client()  # SET VARS for sitri: charybdis_{username, password, endpoint}
 
     return client
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def test_reader_user(test_admin_client):
     reader = test_admin_client.User()
     reader_role = test_admin_client.UserRole.instances(where={"slug": "reader"})[0]
@@ -32,7 +32,7 @@ def test_reader_user(test_admin_client):
     return reader
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def test_reader_client(test_reader_user):
     client = Client(username=test_reader_user.username, password="123")
 
