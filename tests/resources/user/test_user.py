@@ -1,4 +1,4 @@
-from .util import check_read_only
+from tests.resources.util import check_read_only
 
 
 def test_check_user(test_user):
@@ -53,7 +53,3 @@ def test_user_after_update(test_user):
     assert test_user.patronymic == "321"
     assert test_user.birthday == "2019-10-25"
     assert test_user.username == "test1"
-
-
-def test_user_destroy(test_user):
-    test_user.destroy()

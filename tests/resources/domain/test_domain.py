@@ -1,4 +1,4 @@
-from .util import check_read_only
+from tests.resources.util import check_read_only
 
 
 def test_domain_check(test_domain):
@@ -40,7 +40,3 @@ def test_domain_update(test_domain):
     test_domain.save()
 
     assert test_domain.refresh().slug == "test1"
-
-
-def test_domain_destroy(test_domain):
-    test_domain.destroy()
