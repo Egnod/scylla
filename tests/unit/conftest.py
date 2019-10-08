@@ -3,7 +3,7 @@ import pytest
 from scylla import Client
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def test_client():
     client = Client(client=True)
 
