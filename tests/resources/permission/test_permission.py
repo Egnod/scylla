@@ -1,4 +1,4 @@
-def test_domain_check(test_permission):
+def test_permission_check(test_permission):
     test_permission = test_permission.refresh()
 
     assert test_permission.id
@@ -10,10 +10,8 @@ def test_permission_update(test_permission):
 
     test_permission.save()
 
+
+def test_check_permission_after_update(test_permission):
     test_permission = test_permission.refresh()
 
     assert test_permission.slug == "test1"
-
-
-def test_permission_destroy(test_permission):
-    test_permission.destroy()

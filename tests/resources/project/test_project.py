@@ -1,4 +1,4 @@
-from .util import check_read_only
+from tests.resources.util import check_read_only
 
 
 def test_project_check(test_project):
@@ -61,7 +61,3 @@ def test_project_activate(test_project):
     test_project = test_project.refresh()
 
     assert test_project.is_active
-
-
-def test_project_destory(test_project):
-    test_project.destroy()
